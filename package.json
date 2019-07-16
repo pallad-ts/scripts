@@ -1,0 +1,28 @@
+{
+  "name": "alpha-scripts",
+  "version": "1.0.0",
+  "description": "Development scripts for alpha-* packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wookieb/alpha-scripts.git"
+  },
+  "author": "Łukasz Kużyński <lukasz.kuzynski@gmail.com> (http://wookieb.pl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wookieb/alpha-scripts/issues"
+  },
+  "homepage": "https://github.com/wookieb/alpha-scripts#readme",
+  "dependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/sinon": "^7.0.13",
+    "jest": "^24.8.0",
+    "sinon": "^7.3.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}
