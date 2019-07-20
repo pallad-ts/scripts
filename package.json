@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
   "scripts": {
@@ -11,23 +11,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wookieb/alpha-scripts.git"
+    "url": "git+https://github.com/pallad-ts/scripts.git"
   },
   "author": "Łukasz Kużyński <lukasz.kuzynski@gmail.com> (http://wookieb.pl)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wookieb/alpha-scripts/issues"
+    "url": "https://github.com/pallad-ts/scripts/issues"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "bin": {
-    "alpha-scripts": "./bin/run"
+    "pallad-scripts": "./bin/run"
   },
   "types": "compiled/index.d.ts",
   "oclif": {
     "commands": "./compiled/commands",
-    "bin": "alpha-scripts",
+    "bin": "pallad-scripts",
     "plugins": [
       "@oclif/plugin-help"
     ]
