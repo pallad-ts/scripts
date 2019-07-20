@@ -5,4 +5,5 @@ export declare class Init extends Command {
     private initTsconfig;
     private initEditorconfig;
     private initTSLintConfig;
+    private initJestConfig;
 }

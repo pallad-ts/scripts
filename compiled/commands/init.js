@@ -9,7 +9,8 @@ class Init extends command_1.default {
         await Promise.all([
             this.initTsconfig(),
             this.initEditorconfig(),
-            this.initTSLintConfig()
+            this.initTSLintConfig(),
+            this.initJestConfig()
         ]);
     }
     async initTsconfig() {
@@ -20,6 +21,9 @@ class Init extends command_1.default {
     }
     async initTSLintConfig() {
         await util_1.promisify(fs_1.copyFile)(common_1.paths.template('tslint.json'), common_1.projectPath('tslint.json'));
+    }
+    async initJestConfig() {
+        await util_1.promisify(fs_1.copyFile)(common_1.paths.template('jest.config.js'), common_1.projectPath('jest.config.js'));
     }
 }
 Init.description = 'Initializes project';

@@ -10,7 +10,8 @@ export class Init extends Command {
         await Promise.all([
             this.initTsconfig(),
             this.initEditorconfig(),
-            this.initTSLintConfig()
+            this.initTSLintConfig(),
+            this.initJestConfig()
         ])
     }
 
@@ -33,5 +34,12 @@ export class Init extends Command {
             paths.template('tslint.json'),
             projectPath('tslint.json')
         )
+    }
+
+    private async initJestConfig() {
+        await promisify(copyFile)(
+            paths.template('jest.config.js'),
+            projectPath('jest.config.js')
+        );
     }
 }
