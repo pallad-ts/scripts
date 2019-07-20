@@ -1,3 +1,3 @@
 # Alpha scripts
 
-Preconfigure development environment for alpha-* packages
+Preconfigure development environment for @pallad packages

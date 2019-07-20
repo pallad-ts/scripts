@@ -1,5 +1,5 @@
 {
-  "name": "alpha-scripts",
+  "name": "@pallad/scripts",
   "version": "1.0.1",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
