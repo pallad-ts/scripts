@@ -3,7 +3,8 @@ import {resolve} from 'path';
 
 export function runScript(path: string, args: string[] = []) {
     const result = spawnSync(path, args, {
-        stdio: 'inherit'
+        stdio: 'inherit',
+        cwd: PROJECT_ROOT_DIR
     });
 
     if (result.signal) {

@@ -3,4 +3,6 @@ export declare class Init extends Command {
     static description: string;
     run(): Promise<void>;
     private initTsconfig;
+    private initEditorconfig;
+    private initTSLintConfig;
 }

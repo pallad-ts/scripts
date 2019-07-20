@@ -23,7 +23,7 @@
   "bin": {
     "alpha-scripts": "./bin/run"
   },
-  "types": "lib/index.d.ts",
+  "types": "compiled/index.d.ts",
   "oclif": {
     "commands": "./compiled/commands",
     "bin": "alpha-scripts",
@@ -34,8 +34,10 @@
   "files": [
     "/bin",
     "/compiled",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/package-lock.json",
+    "/oclif.manifest.json",
+    "/configs",
+    "/templates"
   ],
   "homepage": "https://github.com/wookieb/alpha-scripts#readme",
   "dependencies": {

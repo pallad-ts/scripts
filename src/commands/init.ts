@@ -9,7 +9,8 @@ export class Init extends Command {
     async run() {
         await Promise.all([
             this.initTsconfig(),
-            this.initEditorconfig()
+            this.initEditorconfig(),
+            this.initTSLintConfig()
         ])
     }
 
@@ -25,5 +26,12 @@ export class Init extends Command {
             paths.template('.editorconfig'),
             projectPath('.editorconfig')
         );
+    }
+
+    private async initTSLintConfig() {
+        await promisify(copyFile)(
+            paths.template('tslint.json'),
+            projectPath('tslint.json')
+        )
     }
 }
