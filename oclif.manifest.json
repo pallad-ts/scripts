@@ -1,0 +1,1 @@
+{"version":"1.0.0","commands":{"compile":{"id":"compile","description":"Compiles project using typescript","pluginName":"alpha-scripts","pluginType":"core","aliases":[],"flags":{},"args":[]},"init":{"id":"init","description":"Initializes project","pluginName":"alpha-scripts","pluginType":"core","aliases":[],"flags":{},"args":[]}}}

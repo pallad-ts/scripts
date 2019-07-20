@@ -1,10 +1,15 @@
 import Command from "@oclif/command";
-import {runScript} from "../../alpha-scripts/src/common";
+import {paths, execCommand, projectPath, runScript} from "../common";
 
 export class Compile extends Command {
     static description = 'Compiles project using typescript';
 
     async run() {
-        runScript('tsc')
+        execCommand(
+            `rm -rf ${projectPath('compiled')}`
+        );
+        runScript(
+            paths.bin('tsc')
+        );
     }
 }

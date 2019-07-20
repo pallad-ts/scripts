@@ -1,0 +1,13 @@
+{
+  "extends": "alpha-scripts/tsconfig-node.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "compiled"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/__tests__/**"
+  ]
+}
