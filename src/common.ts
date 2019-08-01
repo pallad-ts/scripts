@@ -6,6 +6,7 @@ export function runScript(path: string, args: string[] = []) {
         stdio: 'inherit',
         cwd: PROJECT_ROOT_DIR
     });
+    console.log(path, args);
 
     if (result.signal) {
         if (result.signal === 'SIGKILL') {
@@ -34,6 +35,7 @@ export function execCommand(command: string, options?: ExecSyncOptions) {
 }
 
 export const ROOT_DIR = resolve(__dirname, '../');
+export const PROJECT_ROOT_DIR = process.cwd();
 
 export namespace paths {
     export function template(name: string) {
@@ -43,10 +45,8 @@ export namespace paths {
     export function bin(name: string) {
         return resolve(ROOT_DIR, 'node_modules', '.bin', name);
     }
-}
 
-export const PROJECT_ROOT_DIR = process.cwd();
-
-export function projectPath(path: string) {
-    return resolve(PROJECT_ROOT_DIR, path);
+    export function project(path: string) {
+        return resolve(PROJECT_ROOT_DIR, path);
+    }
 }

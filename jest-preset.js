@@ -9,18 +9,19 @@ module.exports = {
         "text",
         "lcov",
     ],
-    errorOnDeprecated: false,
+    errorOnDeprecated: true,
     moduleFileExtensions: [
         "js",
         "json",
         "ts",
     ],
-
     preset: "ts-jest",
-
     roots: [
         "<rootDir>/test"
     ],
+    moduleNameMapper: {
+        '^@src/(.*)$': '<rootDir>/src/$1',
+    },
     testEnvironment: "node",
     testRegex: ".*Test.ts$"
 };

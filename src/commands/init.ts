@@ -1,7 +1,7 @@
 import Command from "@oclif/command";
-import {copyFile} from 'fs';
+import {copyFile, mkdir} from 'fs';
 import {promisify} from "util";
-import {projectPath, paths} from "../common";
+import {paths} from "../common";
 
 export class Init extends Command {
     static description = 'Initializes project';
@@ -18,28 +18,37 @@ export class Init extends Command {
     private async initTsconfig() {
         await promisify(copyFile)(
             paths.template('tsconfig.json'),
-            projectPath('tsconfig.json')
+            paths.project('tsconfig.json')
         );
+
+        await promisify(mkdir)(
+            paths.project('test')
+        );
+
+        await promisify(copyFile)(
+            paths.template('tsconfig-test.json'),
+            paths.project('test/tsconfig.json')
+        )
     }
 
     private async initEditorconfig() {
         await promisify(copyFile)(
             paths.template('.editorconfig'),
-            projectPath('.editorconfig')
+            paths.project('.editorconfig')
         );
     }
 
     private async initTSLintConfig() {
         await promisify(copyFile)(
             paths.template('tslint.json'),
-            projectPath('tslint.json')
+            paths.project('tslint.json')
         )
     }
 
     private async initJestConfig() {
         await promisify(copyFile)(
             paths.template('jest.config.js'),
-            projectPath('jest.config.js')
+            paths.project('jest.config.js')
         );
     }
 }
