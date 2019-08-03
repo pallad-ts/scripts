@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,6 @@
     "/compiled",
     "/package-lock.json",
     "/oclif.manifest.json",
-    "/configs",
     "/templates",
     "/tslint.dist.json",
     "/tsconfig-node.dist.json",

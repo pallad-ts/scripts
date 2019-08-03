@@ -16,9 +16,13 @@ export class Init extends Command {
     }
 
     private async initTsconfig() {
+        await promisify(mkdir)(
+            paths.project('src')
+        );
+
         await promisify(copyFile)(
             paths.template('tsconfig.json'),
-            paths.project('tsconfig.json')
+            paths.project('src/tsconfig.json')
         );
 
         await promisify(mkdir)(

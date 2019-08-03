@@ -14,7 +14,8 @@ class Init extends command_1.default {
         ]);
     }
     async initTsconfig() {
-        await util_1.promisify(fs_1.copyFile)(common_1.paths.template('tsconfig.json'), common_1.paths.project('tsconfig.json'));
+        await util_1.promisify(fs_1.mkdir)(common_1.paths.project('src'));
+        await util_1.promisify(fs_1.copyFile)(common_1.paths.template('tsconfig.json'), common_1.paths.project('src/tsconfig.json'));
         await util_1.promisify(fs_1.mkdir)(common_1.paths.project('test'));
         await util_1.promisify(fs_1.copyFile)(common_1.paths.template('tsconfig-test.json'), common_1.paths.project('test/tsconfig.json'));
     }

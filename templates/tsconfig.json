@@ -1,10 +1,11 @@
 {
     "extends": "@pallad/scripts/tsconfig-node.dist.json",
     "compilerOptions": {
-        "rootDir": "src",
-        "outDir": "compiled"
+        "rootDir": ".",
+        "outDir": "../compiled",
+        "composite": true
     },
     "include": [
-        "src/**/*"
+        "**/*"
     ]
 }
