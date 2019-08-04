@@ -1,5 +1,6 @@
 import {spawnSync, execSync, ExecSyncOptions} from 'child_process'
 import {resolve} from 'path';
+import {sync} from 'resolve-bin';
 
 export function runScript(path: string, args: string[] = []) {
     const result = spawnSync(path, args, {
@@ -43,7 +44,7 @@ export namespace paths {
     }
 
     export function bin(name: string) {
-        return resolve(ROOT_DIR, 'node_modules', '.bin', name);
+        return sync(name);
     }
 
     export function project(path: string) {
