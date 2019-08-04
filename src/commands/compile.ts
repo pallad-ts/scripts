@@ -12,7 +12,7 @@ export class Compile extends Command {
         );
         const {argv} = this.parse(Compile);
         runScript(
-            paths.bin('tsc'),
+            paths.bin('typescript', 'tsc'),
             [
                 '--project',
                 'src',

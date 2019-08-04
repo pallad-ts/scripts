@@ -45,8 +45,8 @@ export namespace paths {
         return resolve(ROOT_DIR, 'templates', name);
     }
 
-    export function bin(name: string) {
-        return sync(name);
+    export function bin(packageName: string, execName: string = packageName) {
+        return sync(packageName, {executable: execName});
     }
 
     export function project(path: string) {
