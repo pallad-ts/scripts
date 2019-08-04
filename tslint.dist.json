@@ -24,7 +24,13 @@
     "no-eval": true,
     "no-floating-promises": true,
     "no-for-in-array": true,
-    "no-implicit-dependencies": true,
+    "no-implicit-dependencies": [
+      true,
+      "dev",
+      [
+        "@src"
+      ]
+    ],
     "no-invalid-template-strings": true,
     "no-null-keyword": true,
     "no-null-undefined-union": true,

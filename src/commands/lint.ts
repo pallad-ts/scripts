@@ -12,9 +12,18 @@ export class Lint extends Command {
             paths.bin('tslint'),
             [
                 '--project',
-                'tsconfig.json',
+                'src/tsconfig.json',
                 ...argv,
-                `./src/**/*.ts`,
+                `./src/**/*.ts`
+            ]
+        );
+
+        runScript(
+            paths.bin('tslint'),
+            [
+                '--project',
+                'test/tsconfig.json',
+                ...argv,
                 `./test/**/*.ts`
             ]
         );

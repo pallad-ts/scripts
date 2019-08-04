@@ -7,7 +7,6 @@ export function runScript(path: string, args: string[] = []) {
         stdio: 'inherit',
         cwd: PROJECT_ROOT_DIR
     });
-    console.log(path, args);
 
     if (result.signal) {
         if (result.signal === 'SIGKILL') {
@@ -24,6 +23,9 @@ export function runScript(path: string, args: string[] = []) {
             );
         }
         process.exit(1);
+    }
+    if (result.status !== null && result.status > 0) {
+        process.exit(result.status);
     }
     return result;
 }
