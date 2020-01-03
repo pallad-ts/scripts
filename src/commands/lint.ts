@@ -1,5 +1,6 @@
 import Command from "@oclif/command";
 import {paths, runScript} from "../common";
+import * as fs from 'fs';
 
 export class Lint extends Command {
     static description = 'Lints project';
@@ -18,14 +19,16 @@ export class Lint extends Command {
             ]
         );
 
-        runScript(
-            paths.bin('tslint'),
-            [
-                '--project',
-                'test/tsconfig.json',
-                ...argv,
-                `./test/**/*.ts`
-            ]
-        );
+        if (fs.existsSync(paths.project('test'))) {
+            runScript(
+                paths.bin('tslint'),
+                [
+                    '--project',
+                    'test/tsconfig.json',
+                    ...argv,
+                    `./test/**/*.ts`
+                ]
+            );
+        }
     }
 }
