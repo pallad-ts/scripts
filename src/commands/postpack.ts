@@ -3,6 +3,6 @@ import {execCommand} from "../common";
 
 export class Postpack extends Command {
     async run() {
-        execCommand(`pr:post`);
+        execCommand(`post`);
     }
 }

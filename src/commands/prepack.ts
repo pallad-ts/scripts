@@ -3,6 +3,6 @@ import {execCommand} from "../common";
 
 export class Prepack extends Command {
     async run() {
-        execCommand(`pr:pre compiled`);
+        execCommand(`pre compiled`);
     }
 }
