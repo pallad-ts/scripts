@@ -1,6 +1,5 @@
 import Command from "@oclif/command";
-import {copyFile, mkdir} from 'fs';
-import {promisify} from "util";
+import {promises} from 'fs';
 import {paths} from "../common";
 
 export class Init extends Command {
@@ -16,41 +15,41 @@ export class Init extends Command {
     }
 
     private async initTsconfig() {
-        await promisify(mkdir)(
+        await promises.mkdir(
             paths.project('src')
         );
 
-        await promisify(copyFile)(
+        await promises.copyFile(
             paths.template('tsconfig.json'),
             paths.project('src/tsconfig.json')
         );
 
-        await promisify(mkdir)(
+        await promises.mkdir(
             paths.project('test')
         );
 
-        await promisify(copyFile)(
+        await promises.copyFile(
             paths.template('tsconfig-test.json'),
             paths.project('test/tsconfig.json')
         )
     }
 
     private async initEditorconfig() {
-        await promisify(copyFile)(
+        await promises.copyFile(
             paths.template('.editorconfig'),
             paths.project('.editorconfig')
         );
     }
 
     private async initTSLintConfig() {
-        await promisify(copyFile)(
+        await promises.copyFile(
             paths.template('tslint.json'),
             paths.project('tslint.json')
         )
     }
 
     private async initJestConfig() {
-        await promisify(copyFile)(
+        await promises.copyFile(
             paths.template('jest.config.js'),
             paths.project('jest.config.js')
         );
