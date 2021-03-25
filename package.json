@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "compile": "rm -rf compiled && tsc -b",
+    "compile": "rm -rf compiled && tsc -b"
   },
   "repository": {
     "type": "git",
