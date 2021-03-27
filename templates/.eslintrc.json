@@ -1,3 +1,4 @@
 {
-  "extends": "@pallad"
+  "extends": "@pallad",
+  "root": true
 }
