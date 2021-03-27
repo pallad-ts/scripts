@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.5",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "/compiled",
     "/oclif.manifest.json",
     "/templates",
-    "/dist/eslint.dist.json",
+    "/dist",
     "/jest-preset.js"
   ],
   "homepage": "https://github.com/wookieb/alpha-scripts#readme",
@@ -57,7 +57,8 @@
     "ts-jest": "^26",
     "eslint-plugin-jsdoc": "^32",
     "tslib": "^2",
-    "typescript": "^4"
+    "typescript": "^4",
+    "@pallad/eslint-config": "1.0.0-alpha.3"
   },
   "peerDependencies": {
     "sinon": "^9"

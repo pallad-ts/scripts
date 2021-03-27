@@ -20,10 +20,7 @@ export class Lint extends Command {
 			[
 				...argv,
 				...filesPaths
-			],
-			{
-				cwd: paths.project('src')
-			}
+			]
 		);
 	}
 }
