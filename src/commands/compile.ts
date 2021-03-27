@@ -15,6 +15,8 @@ export class Compile extends Command {
 		runScript(
 			paths.bin('typescript', 'tsc'),
 			[
+				"--project",
+				"src",
 				"--incremental",
 				...argv
 			]

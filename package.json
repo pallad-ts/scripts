@@ -1,12 +1,13 @@
 {
   "name": "@pallad/scripts",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "compile": "rm -rf compiled && tsc -b",
-    "lint": "eslint src/**/*.ts"
+    "compile": "rm -rf compiled && tsc --incremental --project src",
+    "lint": "eslint src/**/*.ts",
+    "prepack": "npm run compile"
   },
   "repository": {
     "type": "git",
