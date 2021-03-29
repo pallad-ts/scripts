@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "2.0.0-alpha.6",
+  "version": "2.0.0-alpha.7",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
   "scripts": {
@@ -58,7 +58,7 @@
     "eslint-plugin-jsdoc": "^32",
     "tslib": "^2",
     "typescript": "^4",
-    "@pallad/eslint-config": "1.0.0-alpha.3"
+    "@pallad/eslint-config": "1.0.0-alpha.4"
   },
   "peerDependencies": {
     "sinon": "^9"
