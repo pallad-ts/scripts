@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "2.0.0-alpha.9",
+  "version": "2.0.0-alpha.10",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
   "scripts": {
@@ -45,7 +45,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
-    "@pallad/eslint-config": "^1.0.0-alpha.6",
+    "@pallad/eslint-config": "^1.0.0-alpha.7",
     "@types/jest": "^26",
     "@types/sinon": "^9",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
