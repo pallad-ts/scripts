@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
   "scripts": {
@@ -46,14 +46,14 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
     "@pallad/eslint-config": "^1",
-    "@types/jest": "^26",
+    "@types/jest": "^27",
     "@types/sinon": "^9",
-    "eslint": "^7",
-    "jest": "^26",
-    "resolve-bin": "^0.4.0",
-    "ts-jest": "^26",
-    "tslib": "^2",
-    "typescript": "^4"
+    "eslint": "^7.32.0",
+    "jest": "^27",
+    "resolve-bin": "^0.4.3",
+    "ts-jest": "^27",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
   },
   "peerDependencies": {
     "sinon": "^9"
