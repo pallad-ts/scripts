@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Development scripts for alpha-* packages",
   "main": "index.js",
   "scripts": {
@@ -44,7 +44,7 @@
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
-    "@oclif/plugin-help": "^2",
+    "@oclif/plugin-help": "^3",
     "@pallad/eslint-config": "^1",
     "@types/jest": "^27",
     "@types/sinon": "^9",
