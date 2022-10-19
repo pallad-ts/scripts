@@ -2,7 +2,8 @@
   "extends": "../dist/tsconfig-node.json",
   "compilerOptions": {
     "outDir": "../compiled",
-    "rootDir": "."
+    "rootDir": ".",
+    "skipLibCheck": true
   },
   "include": [
     "**/*"
