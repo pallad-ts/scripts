@@ -1,4 +1,3 @@
-const {defaults: preset} = require('ts-jest/presets');
 module.exports = {
 	collectCoverage: true,
 	coverageDirectory: "coverage",
@@ -22,14 +21,16 @@ module.exports = {
 	moduleNameMapper: {
 		'^@src/(.*)$': '<rootDir>/src/$1',
 	},
-	transform: preset.transform,
+	transform: {
+		'^.+\\.tsx?$': [
+			'ts-jest',
+			{
+				tsconfig: '<rootDir>/test/tsconfig.json'
+			}
+		]
+	},
 	testEnvironment: "node",
 	testRegex: ".*Test.ts$",
-	globals: {
-		'ts-jest': {
-			tsconfig: '<rootDir>/test/tsconfig.json'
-		}
-	},
 	reporters: [
 		'default',
 		'jest-junit'
