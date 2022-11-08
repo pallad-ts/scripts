@@ -1,4 +1,4 @@
-import Command from "@oclif/command";
+import {Command} from "@oclif/core";
 import {paths, runScript} from "../common";
 import * as fs from 'fs';
 
@@ -14,7 +14,7 @@ export class Lint extends Command {
 		if (fs.existsSync(paths.project('eslint'))) {
 			filesPaths.push(`./test/**/*.ts`);
 		}
-		const {argv} = this.parse(Lint);
+		const {argv} = await this.parse(Lint);
 		runScript(
 			paths.bin('eslint'),
 			[

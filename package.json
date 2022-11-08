@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Development scripts for @pallad and alpha-* packages",
   "main": "index.js",
   "scripts": {
@@ -42,8 +42,7 @@
   ],
   "homepage": "https://github.com/wookieb/alpha-scripts#readme",
   "dependencies": {
-    "@oclif/command": "^1.8.16",
-    "@oclif/config": "^1.18.3",
+    "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@pallad/eslint-config": "^1.1.1",
     "@types/jest": "^29",

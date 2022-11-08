@@ -1,4 +1,4 @@
-import Command from "@oclif/command";
+import {Command} from "@oclif/core";
 import {paths, execCommand, runScript} from "../common";
 
 export class Compile extends Command {
@@ -11,7 +11,7 @@ export class Compile extends Command {
 		execCommand(
 			`rm -rf ${paths.project('compiled')}`
 		);
-		const {argv} = this.parse(Compile);
+		const {argv} = await this.parse(Compile);
 		runScript(
 			paths.bin('typescript', 'tsc'),
 			[

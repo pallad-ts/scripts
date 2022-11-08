@@ -1,4 +1,4 @@
-import Command from "@oclif/command";
+import {Command} from "@oclif/core";
 import {promises} from 'fs';
 import {paths} from "../common";
 

@@ -1,4 +1,4 @@
-import Command from "@oclif/command";
+import {Command} from "@oclif/core";
 import {paths, runScript} from "../common";
 
 export class Test extends Command {
@@ -8,7 +8,7 @@ export class Test extends Command {
 
 	// eslint-disable-next-line @typescript-eslint/require-await
 	async run() {
-		const {argv} = this.parse(Test);
+		const {argv} = await this.parse(Test);
 		runScript(
 			paths.bin('jest'),
 			argv
