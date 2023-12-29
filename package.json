@@ -7,7 +7,8 @@
     "test": "jest",
     "compile": "rm -rf compiled && tsc --incremental --project src",
     "lint": "eslint src/**/*.ts",
-    "prepack": "npm run compile"
+    "prepack": "oclif manifest && oclif readme && npm run compile",
+    "postpack": "shx rm -f oclif.manifest.json"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,8 @@
   },
   "types": "compiled/index.d.ts",
   "oclif": {
-    "commands": "./compiled/commands",
     "bin": "pallad-scripts",
+    "commands": "./compiled/commands",
     "plugins": [
       "@oclif/plugin-help"
     ]
@@ -42,25 +43,26 @@
   ],
   "homepage": "https://github.com/wookieb/alpha-scripts#readme",
   "dependencies": {
-    "@oclif/core": "^1",
-    "@oclif/plugin-help": "^5",
+    "@oclif/core": "^3",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-plugins": "^4",
     "@pallad/eslint-config": "^1.1.1",
-    "@types/jest": "^29",
-    "@types/sinon": "^10",
+    "@types/sinon": "^17",
     "eslint": "^8",
     "jest": "^29",
     "jest-junit": "^14",
     "resolve-bin": "^1",
     "ts-jest": "^29",
     "tslib": "^2",
-    "typescript": "^4"
+    "typescript": "^5"
   },
   "peerDependencies": {
-    "sinon": "^14"
+    "sinon": "^17"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1.26.10",
     "globby": "^13",
-    "ts-node": "^10"
+    "ts-node": "^10",
+    "shx": "^0.3.3",
+    "oclif": "^4"
   }
 }

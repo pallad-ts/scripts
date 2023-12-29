@@ -2,8 +2,8 @@ import {spawnSync, execSync, ExecSyncOptions, SpawnSyncOptions} from 'child_proc
 import {resolve} from 'path';
 import {sync} from 'resolve-bin';
 
-export function runScript(path: string, args: string[] = [], options?: SpawnSyncOptions) {
-	const result = spawnSync(path, args, {
+export function runScript(path: string, args: Array<string | unknown> = [], options?: SpawnSyncOptions) {
+	const result = spawnSync(path, args as string[], {
 		stdio: 'inherit',
 		cwd: PROJECT_ROOT_DIR,
 		...(options || {})
@@ -25,6 +25,7 @@ export function runScript(path: string, args: string[] = [], options?: SpawnSync
 		}
 		process.exit(1);
 	}
+	// eslint-disable-next-line no-null/no-null
 	if (result.status !== null && result.status > 0) {
 		process.exit(result.status);
 	}

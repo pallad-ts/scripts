@@ -1,0 +1,49 @@
+{
+  "version": "3.0.2",
+  "commands": {
+    "compile": {
+      "id": "compile",
+      "description": "Compiles project using typescript",
+      "strict": false,
+      "pluginName": "@pallad/scripts",
+      "pluginAlias": "@pallad/scripts",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {},
+      "args": {}
+    },
+    "init": {
+      "id": "init",
+      "description": "Initializes project",
+      "strict": true,
+      "pluginName": "@pallad/scripts",
+      "pluginAlias": "@pallad/scripts",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {},
+      "args": {}
+    },
+    "lint": {
+      "id": "lint",
+      "description": "Lints project",
+      "strict": false,
+      "pluginName": "@pallad/scripts",
+      "pluginAlias": "@pallad/scripts",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {},
+      "args": {}
+    },
+    "test": {
+      "id": "test",
+      "description": "Runs tests",
+      "strict": false,
+      "pluginName": "@pallad/scripts",
+      "pluginAlias": "@pallad/scripts",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {},
+      "args": {}
+    }
+  }
+}
