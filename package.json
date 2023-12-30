@@ -23,7 +23,7 @@
     "node": ">=16.0.0"
   },
   "bin": {
-    "pallad-scripts": "./bin/run"
+    "pallad-scripts": "./bin/run.js"
   },
   "types": "compiled/index.d.ts",
   "oclif": {
