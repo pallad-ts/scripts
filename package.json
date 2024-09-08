@@ -1,6 +1,6 @@
 {
   "name": "@pallad/scripts",
-  "version": "3.1.2",
+  "version": "4.0.0",
   "description": "Development scripts for @pallad packages",
   "main": "index.js",
   "scripts": {
