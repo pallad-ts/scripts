@@ -1,7 +1,7 @@
 {
   "name": "@pallad/scripts",
   "version": "3.1.2",
-  "description": "Development scripts for @pallad and alpha-* packages",
+  "description": "Development scripts for @pallad packages",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -46,19 +46,23 @@
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^4",
-    "@pallad/eslint-config": "^1.2",
+    "@pallad/eslint-config": "^1.2.1",
     "@types/jest": "^29.5.11",
-    "@types/sinon": "^17",
-    "eslint": "^8",
+    "eslint": "^9",
     "jest": "^29",
     "jest-junit": "^14",
     "resolve-bin": "^1",
     "ts-jest": "^29",
     "tslib": "^2",
-    "typescript": "^5"
+    "typescript": "^5.5"
   },
   "peerDependencies": {
-    "sinon": "^17"
+    "eslint": "^9",
+    "jest": "^29",
+    "jest-junit": "^14",
+    "ts-jest": "^29",
+    "typescript": "^5.5",
+    "@types/jest": "^29.5.11"
   },
   "devDependencies": {
     "globby": "^13",

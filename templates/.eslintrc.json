@@ -1,4 +1,8 @@
 {
   "extends": "@pallad",
-  "root": true
+  "root": true,
+  "files": [
+    "./src/**/*.ts",
+    "./test/**/*.ts"
+  ]
 }
