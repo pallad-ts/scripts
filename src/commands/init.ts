@@ -30,8 +30,8 @@ export class Init extends Command {
 			paths.project('src/tsconfig.json')
 		);
 		await promises.copyFile(
-			paths.template('tsconfig-test.json'),
-			paths.project('test/tsconfig.json')
+			paths.template('tsconfig.test.json'),
+			paths.project('tsconfig.test.json')
 		)
 	}
 
@@ -44,8 +44,8 @@ export class Init extends Command {
 
 	private async initESLintConfig() {
 		await promises.copyFile(
-			paths.template('.eslintrc.json'),
-			paths.project('.eslintrc.json')
+			paths.template('eslint.config.js'),
+			paths.project('eslint.config.js')
 		)
 	}
 

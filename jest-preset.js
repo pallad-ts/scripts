@@ -15,22 +15,12 @@ module.exports = {
 		"json",
 		"ts",
 	],
-	roots: [
-		"<rootDir>/test"
-	],
-	moduleNameMapper: {
-		'^@src/(.*)$': '<rootDir>/src/$1',
-	},
 	transform: {
 		'^.+\\.tsx?$': [
-			'ts-jest',
-			{
-				tsconfig: '<rootDir>/test/tsconfig.json'
-			}
+			'ts-jest'
 		]
 	},
 	testEnvironment: "node",
-	testRegex: ".*Test.ts$",
 	reporters: [
 		'default',
 		'jest-junit'

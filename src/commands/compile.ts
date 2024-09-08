@@ -6,7 +6,6 @@ export class Compile extends Command {
 
 	static strict = false;
 
-	// eslint-disable-next-line @typescript-eslint/require-await
 	async run() {
 		execCommand(
 			`rm -rf ${paths.project('compiled')}`
