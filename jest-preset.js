@@ -21,6 +21,7 @@ module.exports = {
 		]
 	},
 	testEnvironment: "node",
+	testMatch: ['**/__tests__/**/*.spec.ts?(x)'],
 	reporters: [
 		'default',
 		'jest-junit'
