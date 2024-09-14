@@ -19,19 +19,16 @@ export class Init extends Command {
 		await promises.mkdir(
 			paths.project('src')
 		);
-		await promises.mkdir(
-			paths.project('test')
-		);
 	}
 
 	private async initTsconfig() {
 		await promises.copyFile(
 			paths.template('tsconfig.json'),
-			paths.project('src/tsconfig.json')
+			paths.project('tsconfig.json')
 		);
 		await promises.copyFile(
-			paths.template('tsconfig.test.json'),
-			paths.project('tsconfig.test.json')
+			paths.template('tsconfig.build.json'),
+			paths.project('tsconfig.build.json')
 		)
 	}
 
